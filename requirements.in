@@ -1,0 +1,5 @@
+fastapi             # Web framework
+uvicorn[standard]   # Web server
+jinja2              # Templating language
+python-multipart    # Required to use forms with FastAPI
+httpx               # Perform asynchronous HTTP requests
