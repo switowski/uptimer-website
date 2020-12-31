@@ -30,9 +30,10 @@ async def home(request: Request):
 @app.post("/check/")
 async def check(request: Request, urls: str = Form(...)):
     urls_list = urls.split()
-    async with httpx.AsyncClient() as client:
-        tasks = [get_status(url) for url in urls_list]
-        statuses = await asyncio.gather(*tasks)
+
+    tasks = [get_status(url) for url in urls_list]
+    statuses = await asyncio.gather(*tasks)
+
     return templates.TemplateResponse(
         "home.html",
         {"request": request, "statuses": statuses, "colors": COLORS, "urls": urls},
