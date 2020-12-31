@@ -26,6 +26,8 @@
                   <span class="badge rounded-pill bg-{{colors[status//100]}}">
                   {% if status == 0 %}
                     Wrong URL
+                  {% elif status == -1 %}
+                    Timeout
                   {% else %}
                     {{ status }}
                   {% endif %}

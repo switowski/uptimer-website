@@ -18,6 +18,7 @@ COLORS = {
     4: "warning",  # Client errors
     5: "danger",   # Server errors
     0: "dark",     # Special case for wrong URL
+    -1: "dark",    # Special case for timeout
 }
 
 
